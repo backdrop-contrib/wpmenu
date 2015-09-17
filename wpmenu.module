@@ -5,8 +5,9 @@
  * WordPress wpmenu clone.
  */
 
-use Drupal\Core\Render\Element;
+use \Drupal\Core\Render\Element;
 use \Drupal\Core\Url;
+use \Drupal\search\Plugin\Block;
 
 use Symfony\Component\Yaml\Yaml;
 
@@ -97,6 +98,19 @@ function template_preprocess_wpmenu_top(&$variables) {
   $current_path = \Drupal::service('path.current')->getPath();
   $types = \Drupal\node\Entity\NodeType::loadMultiple();
   $content_types = array_keys($types);
+
+  // Adds core search form with correct styling
+  if (\Drupal::moduleHandler()->moduleExists('search')) {
+    $search_form = Block\SearchBlock::build();
+    $search_form['#attributes']['id'][] = 'adminbarsearch';
+    $search_form['keys']['#attributes']['class'][] = 'adminbar-input';
+    unset($search_form['actions']['submit']);
+    $variables['form'] = drupal_render($search_form);
+  }
+  else{
+    $variables['form'] = '';
+  }
+  // End search form
 
   $variables['is_admin'] = $is_admin;
   $variables['base_path'] = $base_path;

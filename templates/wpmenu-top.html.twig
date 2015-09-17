@@ -81,11 +81,7 @@
 
             <li id="wp-admin-bar-search" class="admin-bar-search       ">
                 <div class="ab-item ab-empty-item" tabindex="-1">
-                    <form action="https://ndevr.io/" method="get" id="adminbarsearch">
-                        <input class="adminbar-input" name="s" id="adminbar-search" type="text" value="" maxlength="150">
-                        <label for="adminbar-search" class="screen-reader-text">Search</label>
-                        <input type="submit" class="adminbar-button" value="Search">
-                    </form>
+                    {{ form|raw }}
                 </div>
             </li>
 
