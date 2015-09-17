@@ -90,7 +90,7 @@
             </li>
 
             <li id="wp-admin-bar-my-account" class="menupop with-avatar">
-                <a class="ab-item"  aria-haspopup="true" href="{{ url('entity.user.canonical', {'user': uid}) }}">Howdy, {{ username }}<img alt='' src='https://1.gravatar.com/avatar/d348f0224b906215c12d0e7e0d8f086c?s=26&#038;d=mm&#038;r=g' srcset='https://1.gravatar.com/avatar/d348f0224b906215c12d0e7e0d8f086c?s=52&amp;d=mm&amp;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' /></a>
+                <a class="ab-item"  aria-haspopup="true" href="{{ url('entity.user.canonical', {'user': uid}) }}">Howdy, {{ username }}<img alt='' src='{{ gravatar }}?s=26&#038;d=mm&#038;r=g' srcset='{{ gravatar }}?s=52&amp;d=mm&amp;r=g 2x' class='avatar avatar-26 photo' height='26' width='26' /></a>
                 <div class="ab-sub-wrapper">
                     <ul id="wp-admin-bar-user-actions" class="ab-submenu">
                         <li id="wp-admin-bar-user-info"><a class="ab-item" tabindex="-1" href="{{ url('entity.user.canonical', {'user': uid, 'edit': 'edit'}) }}"><img alt='' src='{{ gravatar }}?s=64&#038;d=mm&#038;r=g' srcset='{{ gravatar }}?s=128&amp;d=mm&amp;r=g 2x' class='avatar avatar-64 photo' height='64' width='64' /><span class='display-name'>{{ username }}</span><span class='username'>{{ username }}</span></a></li>
