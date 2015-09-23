@@ -1,11 +1,17 @@
-# WordPress Menu
-## What is WordPress Menu
-This is a Drupal module for replacing existing toolbar / admin_toolbar menu modules with a much more styled and usable interface, which WordPress uses. This module contains initial navigation links, as well as utlizes standard Drupal hooks to preprocess the data to anything you need.
+WordPress Menu
+=============
 
-## Installation Instructions
-Currently the modules is not hosted on Drupal.org as we need to determine the best way to serve the 3rd Party code while adhering to Drupal's best practices / standards for not including them directly in the module. (feedback or recommendations are greatly appreciated). For now simply clone or download this project in to your /modules/contrib directory, we assume it will be a full contrib module before Drupal 8 hits full release.
+What is WordPress Menu
+-----------------------------
+This is a Drupal/Backdrop module for replacing existing toolbar / admin_toolbar menu modules with a much more styled and usable interface, which WordPress uses. This module contains initial navigation links, as well as utilizes standard Drupal/Backdrop hooks to preprocess the data to anything you need.
 
-As mentioned above, we welcome feedback or ideas even requests to backport this to Drupal 7.
+Installation Instructions
+--------------------------
+The modules is hosted on Drupal.org as well as Backdrop CMS' GitHub repository, make sure you are downloading/installing the correct version.
+
+NOTE: This module will conflict visually with any other modules adding a toolbar/menu to the top of the page, it is recommended to uninstall those types of module.
+
+After downloading and unzipping, or installing via drush you will need to go download the appropriate WordPress JavaScript and CSS files from WordPress.org/download, I would recommend using [aaronott's script](https://www.drupal.org/node/2566407) to vastly simplify this process. I'll add that in to the repo at some point.
 
 License
 -------
